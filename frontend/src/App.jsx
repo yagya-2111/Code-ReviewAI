@@ -10,9 +10,17 @@ import './App.css'
 
 function App() {
   const [ count, setCount ] = useState(0)
-  const [ code, setCode ] = useState(` function sum() {
-  return 1 + 1
-}`)
+  const [ code, setCode ] = useState(` const express = require("express");
+const cors = require("cors");
+
+const app = express();
+app.use(cors()); // Allow frontend to access backend
+
+app.get("/api/data", (req, res) => {
+  res.json({ message: "Hello from Render!" });
+});
+
+app.listen(3001, () => console.log("Server running on port 3001"));`)
 
   const [ review, setReview ] = useState("")
   const [ loading, setLoading ] = useState(false)
