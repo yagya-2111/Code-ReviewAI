@@ -10,9 +10,24 @@ import './App.css'
 
 function App() {
   const [ count, setCount ] = useState(0)
-  const [ code, setCode ] = useState(` function sum() {
-  return 1 + 1
-}`)
+  const [ code, setCode ] = useState(`function greet(name) {
+  return "Hello, " + name + "!";
+}
+
+let userName = "Yagya";
+console.log(greet(userName));
+
+let numbers = [1, 2, 3, 4, 5];
+let doubled = numbers.map(num => num * 2);
+console.log(doubled);
+
+function add(a, b) {
+  return a + b;
+}
+
+console.log(add(5, 3));
+
+`)
 
   const [ review, setReview ] = useState("")
   const [ loading, setLoading ] = useState(false)
