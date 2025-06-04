@@ -26,7 +26,6 @@ function add(a, b) {
 }
 
 console.log(add(5, 3));
-
 `)
 
   const [ review, setReview ] = useState("")
